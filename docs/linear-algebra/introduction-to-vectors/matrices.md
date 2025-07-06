@@ -227,9 +227,11 @@ A square matrix whose transpose equals its negative: $A^T = -A$
 A square matrix $Q$ with real entries whose transpose is its inverse: 
 
 $$
+\begin{gathered}
 Q^T = Q^{-1}
 \\\text{OR}\\
 Q^T Q = Q Q^T = I_n
+\end{gathered}
 $$
 
 Example: A  rotation matrix $Q = \begin{bmatrix}
@@ -297,6 +299,6 @@ A square matrix $A$ is **involutory** if it is its own inverse: $A^{-1} = A$
 
 For example, an identity matrix is involutory as it is equal to its inverse.
 
-## Resources
+## References
 
 1. [https://math.mit.edu/~dyatlov/54summer10/matalg.pdf](https://math.mit.edu/~dyatlov/54summer10/matalg.pdf)

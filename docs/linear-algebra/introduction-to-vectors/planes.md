@@ -89,6 +89,6 @@ Planes are fundamental in geometry, linear algebra, computer graphics, and physi
 - Define surfaces, collisions, or boundaries
 - Represent flat objects like walls, screens, or layers in 3D models
 
-## Resources
+## References
 
 1. https://www.youtube.com/watch?v=HjJ140TYbXQ

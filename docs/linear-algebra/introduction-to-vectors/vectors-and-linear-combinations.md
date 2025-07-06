@@ -88,10 +88,10 @@ $$
 
 <aside>
 💡
+
 This is different from the number zero! It is a vector with all components equal to zero.
 
 </aside>
-
 
 ## Linear Combinations in Practice
 

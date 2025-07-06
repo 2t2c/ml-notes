@@ -47,7 +47,6 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 extra_javascript:
-  - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
@@ -57,7 +56,7 @@ plugins:
 
 nav:
   - 'Home': 
-    - 'About': 'home/about.md'
+    - 'About': 'index.md'
   - 'Linear Algebra':
     - 'About': 'linear-algebra/about.md'
     - 'Chapters': 
@@ -67,6 +66,9 @@ nav:
         - 'Planes': 'linear-algebra/introduction-to-vectors/planes.md'
         - 'Lengths and Dot Products': 'linear-algebra/introduction-to-vectors/lengths-and-dot-products.md'
         - 'Matrices': 'linear-algebra/introduction-to-vectors/matrices.md'
+      - 'Solving Linear Equations':
+        - 'Preface': 'linear-algebra/solving-linear-equations/preface.md'
+        - 'Methods': 'linear-algebra/solving-linear-equations/methods.md'
   - 'Machine Learning':
     - 'About': 'ml/about.md'
   - 'Reinforcement Learning':

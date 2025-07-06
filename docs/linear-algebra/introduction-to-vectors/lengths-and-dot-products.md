@@ -25,7 +25,6 @@ The word **"unit"** always indicates that some measurement equals one. For examp
 - A **unit price** is the price for one item.
 - A **unit cube** has sides of length one.
 - A **unit circle** is a circle with radius one.
-- 
 
 **Definition**: A **unit vector** $u$ is a vector whose length equals one. This implies: $u⋅u=1$
 
@@ -136,6 +135,7 @@ $$
 then:
 
 $$
+\begin{gathered}
 \mathbf{v} \times \mathbf{w} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ v_1 & v_2 & v_3 \\ w_1 & w_2 & w_3 \end{vmatrix}
 \\
 \mathbf{v} \times \mathbf{w} = (v_2 w_3 - v_3 w_2)\mathbf{i} - (v_3 w_1 - v_1 w_3)\mathbf{j} + (v_1 w_2 - v_2 w_1)\mathbf{k}
@@ -145,6 +145,7 @@ v_2 w_3 - v_3 w_2 \\
 v_3 w_1 - v_1 w_3 \\
 v_1 w_2 - v_2 w_1
 \end{bmatrix}
+\end{gathered}
 $$
 
 This new vector is perpendicular to both **v** and **w**.
@@ -178,14 +179,17 @@ $$
 Then:
 
 $$
+\begin{gathered}
 \mathbf{v} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}, \quad \mathbf{w} = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}
 \\
 \mathbf{v} \times \mathbf{w} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{vmatrix}
 \\
 \mathbf{v} \times \mathbf{w} = \mathbf{i}(0 \cdot 0 - 0 \cdot 1) - \mathbf{j}(1 \cdot 0 - 0 \cdot 0) + \mathbf{k}(1 \cdot 1 - 0 \cdot 0)
+\\
 \mathbf{v} \times \mathbf{w} = \mathbf{i}(0) - \mathbf{j}(0) + \mathbf{k}(1)
 \\
 \mathbf{v} \times \mathbf{w} = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+\end{gathered}
 $$
 
 The result is a vector pointing along the z-axis.
