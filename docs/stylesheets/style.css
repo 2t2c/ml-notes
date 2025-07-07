@@ -16,7 +16,20 @@
   height: 100vh;
   object-fit: cover;
   pointer-events: none;
-  z-index: -1;  /* Behind other content */
+  /* z-index: -1;  */
+}
+
+/* Override the general positioning for specific elements */
+.parallax__map,
+.parallax__tower,
+.parallax__foreground-front,
+.parallax__foreground-back {
+  position: fixed !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: initial !important;
 }
 
 .parallax > * {
@@ -24,7 +37,6 @@
   animation: parallax linear;
   animation-timeline: scroll();
 }
-
 
 .primary-header,
 .about {
@@ -42,7 +54,6 @@
 
 .parallax__bg {
   --parallax-speed: -10;
-
   z-index: 1;
   min-height: 100%;
   width: 100%;
@@ -61,38 +72,43 @@
 
 .parallax__map {
   --parallax-speed: 10;
-  z-index: 4;
-  width: 500px !important;
+  z-index: 5;
+  width: 35vw !important;
   height: auto !important;
-  margin-left: 950px;
-  margin-top: 630px;
+  position: absolute;
+  right: 1vw;  /* Position from right edge */
+  bottom: 0vh;  /* Position from bottom - use vh for vertical measurement */
 }
 
 .parallax__tower {
   --parallax-speed: 10;
-  z-index: 5;
-  margin-left: -150px;
-  width: 1400px !important;
+  z-index: 3;
+  width: 100vw !important;
   height: auto !important;
-  margin-top: 50px;
+  /* Use viewport units and positioning instead of margins */
+  position: absolute;
+  right: 11vw;  /* Equivalent to margin-left: -150px on 1600px screen */
+  bottom: 0vh;  /* Anchor to bottom */
 }
-
 
 .parallax__foreground-front,
 .parallax__foreground-back {
-  z-index: 999;
+  z-index: 4;
   align-self: end;
+  width: 200vw !important;
+  height: auto !important;
+  bottom: 0vh;
+  right: 0vw;
 }
 
 .parallax__foreground-back {
-  transform: scaleY(1.2);
+  transform: scaleY(1.25);
   transform-origin: bottom;
   mix-blend-mode: hard-light;
 }
 
 .main-content {
   position: relative;
-  /* z-index: 1; */
   background: hsl(238, 100%, 6%);
   padding-block: 6rem;
 }
@@ -100,7 +116,7 @@
 @keyframes parallax {
   to {
     transform: 
-      translateY(calc(var(--parallax-speed) * 9px));
+      translateY(calc(var(--parallax-speed) * 5px));
   }
 }
 
@@ -113,15 +129,15 @@ html {
 .homepage .about__title {
   font-weight: 800;
   font-size: 2rem;
-  text-transform: none; /* override uppercase if desired */
-  color: #fff; /* ensure white */
+  text-transform: none;
+  color: #fff;
   margin-left: -2.5rem;
-
 }
+
 .homepage .about__title span {
   font-weight: 800;
   font-size: 2rem;
-  color: #ff4081; /* or any accent color */
+  color: #ff4081;
   white-space: nowrap;
   display: block;
 }
@@ -132,6 +148,7 @@ html {
   text-align: center;
   margin-block-start: max(20vh, 8rem);
   margin-right: -10rem;
+  z-index: 999;
 }
 
 .homepage .description__text {
@@ -141,7 +158,6 @@ html {
   color: #fff;
   font-style: normal;
 }
-
 
 img {
   display: block;
@@ -239,33 +255,83 @@ img {
 }
 
 .social-links a {
-  margin-right: 1rem; /* or any desired spacing */
-  color: inherit; /* keep icon color consistent */
+  margin-right: 1rem;
+  color: inherit;
   text-decoration: none;
 }
 
 .social-links a:last-child {
-  margin-right: 0; /* no extra margin after last icon */
+  margin-right: 0;
 }
-
 
 .social-links a .fa-github {
   color: #c5d1e1 !important;
 }
 .social-links a .fa-github:hover {
-  color: #ff4081 !important;  /* Slightly darker on hover */
+  color: #ff4081 !important;
 }
 
 .social-links a .fa-kaggle {
   color: #20BEFF !important;
 }
 .social-links a .fa-kaggle:hover {
-  color: #ff4081 !important;  /* Slightly darker on hover */
+  color: #ff4081 !important;
 }
 
 .social-links a .fa-linkedin {
   color: #0077B5 !important;
 }
 .social-links a .fa-linkedin:hover {
-  color: #ff4081 !important;  /* Slightly darker on hover */
+  color: #ff4081 !important;
+}
+
+.fun-menu {
+  margin-top: 2rem;
+  text-align: center;
+  font-family: monospace;
+  color: white;
+  z-index: 999;
+  position: relative;
+}
+
+.fun-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.fun-menu li {
+  margin: 1rem 0;
+}
+
+.fun-menu a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+
+.fun-menu a:hover {
+  color: #ff8400; /* yellowish color */
+}
+
+@keyframes pulsate {
+  0% {
+    color: #ff8400;
+    text-shadow: 0 0 5px #ff8400;
+  }
+  50% {
+    color: #fff;
+    text-shadow: 0 0 15px #ff8400;
+  }
+  100% {
+    color: #ff8400;
+    text-shadow: 0 0 5px #ff8400;
+  }
+}
+
+.new-game-link {
+  animation: pulsate 1.5s infinite;
 }
