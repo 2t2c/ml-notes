@@ -3,6 +3,7 @@ site_url: https://2t2c.github.io/ml-notes/
 theme:
   name: material
   logo: assets/logo.png
+  custom_dir: overrides
   features:
     - navigation.tabs
     - navigation.sections
@@ -50,13 +51,16 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
+extra_css:
+  - stylesheets/style.css
+  - stylesheets/extra.css
+  
 plugins:
   - search
   - table-reader
 
 nav:
-  - 'Home': 
-    - 'About': 'index.md'
+  - 'Home': 'index.md'
   - 'Linear Algebra':
     - 'About': 'linear-algebra/about.md'
     - 'Chapters': 

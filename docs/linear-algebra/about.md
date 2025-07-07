@@ -1,4 +1,4 @@
-# Linear Algebra/table
+# Linear Algebra
 
 # Books
 

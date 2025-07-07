@@ -1,0 +1,11 @@
+/* Target pages that contain the homepage div */
+body:has(.homepage) .md-header {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body:has(.homepage) .md-tabs{
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+}

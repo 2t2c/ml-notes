@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+
+{% block extrahead %}
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+{% endblock %}
+
+
+{% block content %}
+<div class="homepage">
+  <div class="parallax">
+    <header class="primary-header">
+      <div class="wrapper">
+        <div class="primary-header__inner">
+          <div class="logo">
+            <img src="assets/book.png" alt="Logo" />
+          </div>
+          <div class="flex-group" aria-label="social links">
+            <div style="width: 15rem; height: 6rem;"></div>
+            <!-- <a href="https://github.com/2t2c" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.kaggle.com/thakurudit" target="_blank" rel="noopener">Kaggle</a>
+            <a href="https://www.linkedin.com/in/thakurudit" target="_blank" rel="noopener">LinkedIn</a> -->
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="about">
+      <div class="wrapper">
+        <h1 class="about__title">
+          <span>Handbook</span> for Mathematics, Machine Learning and More.
+        </h1>
+      </div>
+    </div>
+
+    <div class="description">
+      <p class="description__text">
+        A structured collection of notes on machine learning, mathematics, and computer science. Compiled from courses, books, lectures, and forums to support efficient learning and review.
+      </p>
+      <div class="social-links">
+        <a href="https://github.com/2t2c" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="https://www.kaggle.com/thakurudit" target="_blank" rel="noopener" aria-label="Kaggle">
+          <i class="fab fa-kaggle fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/thakurudit" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+      </div>
+    </div>
+
+
+    <img class="parallax__bg" src="assets/firewatch.jpg" alt="Background" />
+    <!-- <img class="parallax__dust" src="assets/dust.webp" alt="Dust" /> -->
+    <img class="parallax__foreground-back" src="assets/foreground-back.webp" alt="Foreground Back" />
+    <img class="parallax__foreground-front" src="assets/foreground-front.webp" alt="Foreground Front" />
+    <img class="parallax__tower" src="assets/tower.png" alt="Tower" />
+    <!-- <img class="parallax__luna" src="assets/luna.webp" alt="Luna" /> -->
+    <img class="parallax__map" src="assets/map.png" alt="Map" />
+    <!-- <img class="parallax__rays" src="assets/rays.webp" alt="Rays" /> -->
+  </div>
+
+  <!-- <main class="main-content">
+    <div class="wrapper">
+      <p>
+        Welcome to my collection of structured notes on various topics in machine learning, mathematics, and computer science. These notes are compiled from courses, books, YouTube lectures, online forums, and personal study sessions. The goal is to create a structured and accessible resource for learning and revision across topics like mathematics, machine learning, and computer science.
+      </p>
+
+    </div>
+  </main> -->
+</div>
+{% endblock %}
