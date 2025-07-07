@@ -247,3 +247,25 @@ img {
 .social-links a:last-child {
   margin-right: 0; /* no extra margin after last icon */
 }
+
+
+.social-links a .fa-github {
+  color: #c5d1e1 !important;
+}
+.social-links a .fa-github:hover {
+  color: #ff4081 !important;  /* Slightly darker on hover */
+}
+
+.social-links a .fa-kaggle {
+  color: #20BEFF !important;
+}
+.social-links a .fa-kaggle:hover {
+  color: #ff4081 !important;  /* Slightly darker on hover */
+}
+
+.social-links a .fa-linkedin {
+  color: #0077B5 !important;
+}
+.social-links a .fa-linkedin:hover {
+  color: #ff4081 !important;  /* Slightly darker on hover */
+}
