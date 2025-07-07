@@ -53,11 +53,57 @@
       </div>
       <div class="fun-menu">
         <ul>
-          <li><a href="#" class="new-game-link">New Game</a></li>
-          <li><a href="#" id="new-game">Settings</a></li>
+          <li class="new-game-wrapper">
+            <a href="#" id="new-game-link">New Game</a>
+            <div id="new-game-box" class="disclaimer">
+              <div class="gif-container">
+                <img src="assets/game.gif" alt="Game Gif" style="width:100%; height:auto; border-radius:2px;">
+                <div class="loading-text glitch" aria-label="Loading">
+                  <span aria-hidden="true">loading...</span>
+                  loading...
+                  <span aria-hidden="true">loading...</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="disclaimer-wrapper">
+            <a href="#" id="disclaimer-link">Disclaimer</a>
+            <div id="disclaimer-box" class="disclaimer">
+              <p>These notes are intended for educational and reference purposes only. While I have done my best to ensure accuracy, there may be errors or omissions. The content may include interpretations or summaries of external materials; all credit goes to the original authors and sources. Please verify critical information independently, and feel free to report any mistakes or suggest improvements.</p>
+            </div>
+          </li>
           <li><a href="#" onclick="window.location.href='https://www.google.com'; return false;">Quit</a></li>
         </ul>
       </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const disclaimerLink = document.getElementById('disclaimer-link');
+          const disclaimerBox = document.getElementById('disclaimer-box');
+          const newGameLink = document.getElementById('new-game-link');
+          const newGameBox = document.getElementById('new-game-box');
+          const loadingText = newGameBox.querySelector('.loading-text');
+
+          disclaimerLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            disclaimerBox.classList.toggle('show');
+            newGameBox.classList.remove('show'); // close gif if open
+            if (loadingText) loadingText.style.display = 'none'; // hide loading text
+          });
+
+          newGameLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            newGameBox.classList.toggle('show');
+            disclaimerBox.classList.remove('show'); // close disclaimer if open
+            if (loadingText) {
+              if (newGameBox.classList.contains('show')) {
+                loadingText.style.display = 'block';
+              } else {
+                loadingText.style.display = 'none';
+              }
+            }
+          });
+        });
+      </script>
 
     </div>
 
