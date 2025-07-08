@@ -1,5 +1,5 @@
 ---
-title: ML Notes
+title: 
 template: home.html
 hide:
   - navigation
