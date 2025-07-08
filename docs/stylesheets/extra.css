@@ -9,3 +9,49 @@ body:has(.homepage) .md-tabs{
   box-shadow: none !important;
   border-bottom: none !important;
 }
+
+/* body:has(.homepage) .md-header, */
+/* body:has(.homepage) .md-tabs:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+} */
+
+
+/* Add individual tab hover effects */
+/* body:has(.homepage) .md-tabs__item {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body:has(.homepage) .md-tabs__item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 0;
+  mask: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+  -webkit-mask: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+  transform: translate(-50%, -50%);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 0;
+  z-index: -1;
+}
+
+body:has(.homepage) .md-tabs__item:hover::before {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+body:has(.homepage) .md-tabs__item:hover {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+body:has(.homepage) .md-tabs__link {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+} */

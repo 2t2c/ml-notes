@@ -60,6 +60,16 @@
   object-fit: cover;
 }
 
+.parallax__overlay {
+  --parallax-speed: -10;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+
 .parallax__dust {
   --parallax-speed: -20;
   z-index: 2;
@@ -71,7 +81,7 @@
 }
 
 .parallax__map {
-  --parallax-speed: 10;
+  --parallax-speed: 5;
   z-index: 5;
   width: 35vw !important;
   height: auto !important;
@@ -143,6 +153,7 @@ html {
 }
 
 .homepage .description {
+  --parallax-speed: 10;
   margin-left: auto;
   max-width: 60ch;
   text-align: center;
@@ -219,7 +230,7 @@ img {
     position: absolute;
     inset: -3rem;
     z-index: -1;
-    background: radial-gradient(hsl(0 0% 100% / 0.5), transparent 70%);
+    background: radial-gradient(hsla(324, 52%, 57%, 0.5), transparent 70%);
   }
 }
 
@@ -241,7 +252,7 @@ img {
     display: block;
   }
 
-  &::after {
+  /* &::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -251,7 +262,7 @@ img {
     opacity: 0.5;
     filter: blur(5rem);
     translate: -50%;
-  }
+  } */
 }
 
 .social-links a {
