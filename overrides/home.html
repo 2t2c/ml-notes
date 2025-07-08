@@ -108,7 +108,7 @@
     </div>
 
 
-    <img class="parallax__bg" src="assets/firewatch.jpg" alt="Background" />
+    <img id="parallax-bg" class="parallax__bg" src="assets/firewatch_dark.jpg" alt="Background" />
     <div class="parallax__overlay"></div>
     <!-- <img class="parallax__dust" src="assets/dust.webp" alt="Dust" /> -->
     <img class="parallax__foreground-back" src="assets/foreground-back.webp" alt="Foreground Back" />
@@ -117,6 +117,30 @@
     <!-- <img class="parallax__luna" src="assets/luna.webp" alt="Luna" /> -->
     <img class="parallax__map" src="assets/map.png" alt="Map" />
     <!-- <img class="parallax__rays" src="assets/rays.webp" alt="Rays" /> -->
+
+    <script>
+      function updateBackground() {
+        const bg = document.getElementById("parallax-bg");
+        const scheme = document.body.getAttribute("data-md-color-scheme");
+        console.log("Color scheme:", scheme);
+        if (scheme === "default" || scheme === "light") {
+          bg.src = "assets/firewatch_light.jpg";
+        } else {
+          bg.src = "assets/firewatch_dark.jpg";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(updateBackground, 100);
+
+        const observer = new MutationObserver(updateBackground);
+        observer.observe(document.body, {
+          attributes: true,
+          attributeFilter: ["data-md-color-scheme"],
+        });
+      });
+    </script>
+
   </div>
 
 </div>
