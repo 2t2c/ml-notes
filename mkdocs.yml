@@ -59,6 +59,9 @@ plugins:
   - search
   - table-reader
 
+hooks:
+  - hooks/drop_page_links.py
+
 nav:
   - 'Home': 'index.md'
   - 'Linear Algebra':
@@ -73,6 +76,23 @@ nav:
       - 'Solving Linear Equations':
         - 'Preface': 'linear-algebra/solving-linear-equations/preface.md'
         - 'Methods': 'linear-algebra/solving-linear-equations/methods.md'
+  - 'Probability Theory':
+    - 'About': 'probability-theory/preface.md'
+    - 'Chapters': 
+      - 'Introduction': 'probability-theory/introduction.md'
+      - 'Basic Principle of Counting': 
+        - 'Preface': 'probability-theory/basic-principle-of-counting/preface.md'
+        - 'Permutations': 'probability-theory/basic-principle-of-counting/permutations.md'
+        - 'Combinations': 'probability-theory/basic-principle-of-counting/combinations.md'
+      - 'Axioms of Probability':
+        - 'Preface': 'probability-theory/axioms-of-probability/preface.md'
+        - 'Sample Space and Events': 'probability-theory/axioms-of-probability/sample-space-and-events.md'
+      - 'Conditional Probability':
+        - 'Preface': 'probability-theory/conditional-probability/preface.md'
+        - 'Introduction': 'probability-theory/conditional-probability/introduction.md'
+        - 'Law of Total Probability': 'probability-theory/conditional-probability/law-of-total-probability.md'
+        - 'Independence': 'probability-theory/conditional-probability/independence.md'
+        - 'Bayes Theorem': 'probability-theory/conditional-probability/bayes-theorem.md'
   - 'Machine Learning':
     - 'About': 'ml/about.md'
   - 'Reinforcement Learning':

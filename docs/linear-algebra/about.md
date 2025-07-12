@@ -1,15 +1,15 @@
 # Linear Algebra
 
-# Books
+## Books
 
 1. "Linear Algebra Done Right" by Sheldon Axler
 2. "Linear Algebra and Its Applications" by David C. Lay, Steven R. Lay, and Judi J. McDonald
 3. “Introduction to Linear Algebra” by Gilbert Strang
 
-# Resources
+## Resources
 {{ read_csv('linear-algebra/resources.csv') }}
 
-# Chapters
+## Chapters
 
 [Introduction to Vectors](Introduction to Vectors 22681ba4f78a800c9044fe67d1f9468f.md)
 
