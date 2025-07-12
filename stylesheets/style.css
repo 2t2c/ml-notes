@@ -1,0 +1,459 @@
+.parallax {
+  position: relative;
+  z-index: 0;
+  min-height: 75vh;
+  display: grid;
+  grid-template-areas: "stack";
+  width: 100%;
+  height: 100vh;
+}
+
+.parallax > img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  pointer-events: none;
+  /* z-index: -1;  */
+}
+
+/* Override the general positioning for specific elements */
+.parallax__map,
+.parallax__tower,
+.parallax__foreground-front,
+.parallax__foreground-back {
+  position: fixed !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: initial !important;
+}
+
+.parallax > * {
+  grid-area: stack;
+  animation: parallax linear;
+  animation-timeline: scroll();
+}
+
+.primary-header,
+.about {
+  --parallax-speed: 0.25;
+  z-index: 15;
+  position: fixed;
+  top: 15vh;
+  left: 10%;
+  transform: translateY(-15%);
+  margin-block-start: 0;
+  z-index: 10;
+  width: max-content;
+  pointer-events: none;
+}
+
+.parallax__bg {
+  --parallax-speed: -10;
+  z-index: 1;
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.parallax__overlay {
+  --parallax-speed: -10;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+.parallax__dust {
+  --parallax-speed: -20;
+  z-index: 2;
+}
+
+.parallax__luna {
+  --parallax-speed: 50;
+  z-index: 3;
+}
+
+.parallax__map {
+  --parallax-speed: 5;
+  z-index: 5;
+  width: 35vw !important;
+  height: auto !important;
+  position: absolute;
+  right: 1vw;  /* Position from right edge */
+  bottom: 0vh;  /* Position from bottom - use vh for vertical measurement */
+}
+
+.parallax__tower {
+  --parallax-speed: 10;
+  z-index: 3;
+  width: 100vw !important;
+  height: auto !important;
+  /* Use viewport units and positioning instead of margins */
+  position: absolute;
+  right: 11vw;  /* Equivalent to margin-left: -150px on 1600px screen */
+  bottom: 0vh;  /* Anchor to bottom */
+}
+
+.parallax__foreground-front,
+.parallax__foreground-back {
+  z-index: 4;
+  align-self: end;
+  width: 200vw !important;
+  height: auto !important;
+  bottom: 0vh;
+  right: 0vw;
+}
+
+.parallax__foreground-back {
+  transform: scaleY(1.25);
+  transform-origin: bottom;
+  mix-blend-mode: hard-light;
+}
+
+.main-content {
+  position: relative;
+  background: hsl(238, 100%, 6%);
+  padding-block: 6rem;
+}
+
+@keyframes parallax {
+  to {
+    transform: 
+      translateY(calc(var(--parallax-speed) * 5px));
+  }
+}
+
+/* general styling */
+
+html {
+  color-scheme: dark;
+}
+
+.homepage .about__title {
+  top: -9vh;
+  font-weight: 800;
+  font-size: 2.5rem !important;
+  text-transform: none;
+  color: #fff;
+  margin-left: -2.5rem;
+}
+
+.homepage .about__title span {
+  font-family: "Nanum Pen Script";
+  position: relative;
+  top: -0.8vh;
+  margin-left: 6rem;
+  font-weight: 800;
+  font-size: 4rem !important;
+  text-transform: uppercase;
+  color: #ff4081;
+  white-space: nowrap;
+  display: block;
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.homepage .description {
+  --parallax-speed: 10;
+  margin-left: auto;
+  max-width: 60ch;
+  text-align: center;
+  margin-block-start: max(20vh, 8rem);
+  margin-right: -12.5rem;
+  z-index: 999;
+}
+
+.homepage .description__text {
+  font-size: 1.125rem;
+  line-height: 1.25;
+  font-weight: 500;
+  color: #fff;
+  font-style: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.wrapper {
+  width: min(65rem, 100% - 4rem);
+  margin-inline: auto;
+}
+
+.flex-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  font: inherit;
+  font-style: italic;
+  text-transform: uppercase;
+  background: hsl(279, 75%, 59%);
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 0.125em;
+}
+
+.primary-header {
+  padding-block: 2rem;
+}
+
+.primary-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.primary-nav ul {
+  flex: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.primary-nav a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logo {
+  max-width: 100px;
+  position: fixed;
+  margin-left: -2.5rem;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -3rem;
+    z-index: -1;
+    background: radial-gradient(hsla(324, 52%, 57%, 0.5), transparent 70%);
+  }
+}
+
+.about {
+  margin-block-start: max(20vh, 8rem);
+}
+
+.homepage .about__title {
+  font-size: 3rem;
+  max-width: 18ch;
+  line-height: 1;
+  font-style: italic;
+  font-weight: 900;
+  position: relative;
+
+  > span {
+    font-style: normal;
+    font-size: 0.5em;
+    display: block;
+  }
+
+  /* &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: black;
+    z-index: -1;
+    scale: 2;
+    opacity: 0.5;
+    filter: blur(5rem);
+    translate: -50%;
+  } */
+}
+
+.social-links a {
+  margin-right: 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.social-links a:last-child {
+  margin-right: 0;
+}
+
+.social-links a .fa-github {
+  color: #c5d1e1 !important;
+}
+.social-links a .fa-github:hover {
+  color: #ff4081 !important;
+}
+
+.social-links a .fa-kaggle {
+  color: #20BEFF !important;
+}
+.social-links a .fa-kaggle:hover {
+  color: #ff4081 !important;
+}
+
+.social-links a .fa-linkedin {
+  color: #0077B5 !important;
+}
+.social-links a .fa-linkedin:hover {
+  color: #ff4081 !important;
+}
+
+.fun-menu {
+  margin-top: 2rem;
+  text-align: center;
+  font-family: monospace;
+  color: white;
+  z-index: 999;
+  position: relative;
+  top: -2vh;
+}
+
+.fun-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.fun-menu li {
+  margin: 1rem 0;
+}
+
+.fun-menu a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+
+.fun-menu a:link,
+.fun-menu a:visited,
+.fun-menu a:focus,
+.fun-menu a:hover,
+.fun-menu a:active {
+  color: #ffffff; 
+  text-decoration: none;
+  outline: none;
+}
+
+
+.fun-menu a:hover {
+  color: #ff8400; /* yellowish color */
+}
+
+@keyframes pulsate {
+  0% {
+    color: #ff8400;
+    text-shadow: 0 0 5px #ff8400;
+  }
+  50% {
+    color: #fff;
+    text-shadow: 0 0 15px #ff8400;
+  }
+  100% {
+    color: #ff8400;
+    text-shadow: 0 0 5px #ff8400;
+  }
+}
+
+#new-game-link {
+  animation: pulsate 1.5s infinite;
+}
+
+.disclaimer {
+  max-height: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  margin: auto;
+  padding: 0rem 0.25rem;
+  width: 80%;
+  border-radius: 0.5rem;
+  transition: max-height 0.6s ease-out, padding 0.3s ease-out;
+  font-size: medium;
+}
+
+.disclaimer.show {
+  max-height: 500px; /* or adjust based on content */
+  padding: 1rem;
+}
+
+.gif-container {
+  position: relative;
+}
+
+
+.loading-text {
+  display: none;
+  position: absolute; 
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  animation: glitch 500ms infinite;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+               -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+               0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  bottom: 0.25rem;
+  left: 0.75rem;
+}
+
+.loading-text span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loading-text span:first-child {
+  animation: glitch 650ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-0.025em, -0.0125em);
+  opacity: 0.8;
+}
+
+.loading-text span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
+  transform: translate(0.0125em, 0.025em);
+  opacity: 0.8;
+}
+
+@keyframes glitch {
+  0%, 14% {
+    text-shadow:
+      0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15%, 49% {
+    text-shadow:
+      -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50%, 99% {
+    text-shadow:
+      0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75),
+      0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow:
+      -0.025em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
