@@ -77,10 +77,13 @@ nav:
         - 'Preface': 'linear-algebra/solving-linear-equations/preface.md'
         - 'Methods': 'linear-algebra/solving-linear-equations/methods.md'
   - 'Probability Theory':
-    - 'About': 'probability-theory/preface.md'
+    - 'About': 'probability-theory/about.md'
     - 'Chapters': 
       - 'Introduction': 'probability-theory/introduction.md'
-      - 'Basic Principle of Counting': 
+      - 'Basic Statistics':
+        - 'Preface': 'probability-theory/basic-statistics/preface.md'
+        - 'Expectation': 'probability-theory/basic-statistics/expectation.md'
+      - 'Basic Principle of Counting':
         - 'Preface': 'probability-theory/basic-principle-of-counting/preface.md'
         - 'Permutations': 'probability-theory/basic-principle-of-counting/permutations.md'
         - 'Combinations': 'probability-theory/basic-principle-of-counting/combinations.md'
@@ -93,6 +96,27 @@ nav:
         - 'Law of Total Probability': 'probability-theory/conditional-probability/law-of-total-probability.md'
         - 'Independence': 'probability-theory/conditional-probability/independence.md'
         - 'Bayes Theorem': 'probability-theory/conditional-probability/bayes-theorem.md'
+      - 'Random Variables':
+        - 'Preface': 'probability-theory/random-variables/preface.md'
+        - 'Discrete Random Variables': 'probability-theory/random-variables/discrete-random-variables.md'
+        - 'Expectation of a Function of a Random Variable': 'probability-theory/random-variables/expectation-of-a-function-of-a-random-variable.md'
+        - 'Bernoulli and Binomial Variables': 'probability-theory/random-variables/bernoulli-and-binomial-variables.md'
+        - 'Poisson Distribution': 'probability-theory/random-variables/poisson-distribution.md'
+        - 'Geometric Distribution': 'probability-theory/random-variables/geometric-distribution.md'
+      - 'Continuous Random Variables':
+        - 'Preface': 'probability-theory/continuous-random-variables/preface.md'
+        - 'Normal Distribution': 'probability-theory/continuous-random-variables/normal-distribution.md'
+        - 'Exponential Distribution': 'probability-theory/continuous-random-variables/exponential-distribution.md'
+        - 'Connection Between Exponential and Poisson Distributions': 'probability-theory/continuous-random-variables/connection-between-exponential-and-poisson-distributions.md'
+        - 'Gamma Distribution': 'probability-theory/continuous-random-variables/gamma-distribution.md'
+      - 'Functions of a Random Variable':
+        - 'Preface': 'probability-theory/functions-of-a-random-variable/preface.md'
+        - 'Probability Mass Function (PMF)': 'probability-theory/functions-of-a-random-variable/probability-mass-function-(pmf).md'
+        - 'Probability Density Function (PDF)': 'probability-theory/functions-of-a-random-variable/probability-density-function-(pdf).md'
+        - 'Cumulative Distribution Function (CDF)': 'probability-theory/functions-of-a-random-variable/cumulative-distribution-function-(cdf).md'
+        - 'Gamma Function': 'probability-theory/functions-of-a-random-variable/gamma-function.md'
+        - 'Beta Function': 'probability-theory/functions-of-a-random-variable/beta-function.md'
+        - 'Moment Generating Function (MGF)': 'probability-theory/functions-of-a-random-variable/moment-generating-function-(mgf).md'
   - 'Machine Learning':
     - 'About': 'ml/about.md'
   - 'Reinforcement Learning':

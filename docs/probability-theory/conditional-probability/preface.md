@@ -47,7 +47,7 @@ Conditional probability is essential because:
 
 It moves probability from static, one-time events to dynamic, **context-aware inference**.
 
-## **Sections**
+## Sections
 
 [Introduction](Conditional%20Probability%2022d81ba4f78a80d0b53ff357e4a94f69/Introduction%2022d81ba4f78a8060b2bcc6f98a4dcf20.md)
 

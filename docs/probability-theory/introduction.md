@@ -31,18 +31,25 @@
 - Probability often reduces to counting how many outcomes satisfy certain criteria.
 - Example: How many poker hands of a certain type are possible? What is the probability that three dice sum to 13?
 
+<aside>
+💡
 
-!!! note
-    **Probability vs. Statistics**  
-    - Probability: Assume Known distribution, unknown future data; quantifies chance of events.  
-    - Statistics: Known data samples, unknown distribution; infer properties of the system from data. For example, ML for learning the probability distribution (i.e. parameters)
+**Probability vs. Statistics**
 
-!!! note
-    **Probability vs. Likelihood**  
-    - Probability is the chance of observing a given outcome based on a known model. Likelihood is the chance of the model being true given a specific outcome.  
-    - **Likelihood** is a method/statistical concept **used within** statistics. In other words, **probability** asks "What are the odds of seeing this data, given the model?" while **likelihood** asks "How likely is this model, given the data?"  
-    - **Probability** is used when we know the model or process and want to predict how likely a particular outcome is. For example, if we know a coin is fair, the probability of getting heads is 50%.  
-    - **Likelihood** is used when we have data (the outcome) and want to figure out which model or parameter is most likely to have produced that data. For example, if we flip a coin and get heads 9 out of 10 times, we might use likelihood to determine how fair the coin is.  
+- Probability: Assume Known distribution, unknown future data; quantifies chance of events.
+- Statistics: Known data samples, unknown distribution; infer properties of the system from data. For example, ML for learning the probability distribution (i.e. parameters)
+</aside>
+
+<aside>
+💡
+
+**Probability vs. Likelihood**
+
+- Probability is the chance of observing a given outcome based on a known model. Likelihood is the chance of the model being true given a specific outcome.
+- **Likelihood** is a method/statistical concept **used within** statistics. In other words, **probability** asks "What are the odds of seeing this data, given the model?" while **likelihood** asks "How likely is this model, given the data?"
+- **Probability** is used when we know the model or process and want to predict how likely a particular outcome is. For example, if we know a coin is fair, the probability of getting heads is 50%.
+- **Likelihood** is used when we have data (the outcome) and want to figure out which model or parameter is most likely to have produced that data. For example, if we flip a coin and get heads 9 out of 10 times, we might use likelihood to determine how fair the coin is.
+</aside>
 
 ## How
 

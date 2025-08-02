@@ -22,3 +22,7 @@
 [Random Variables](Probability%20Theory%2021181ba4f78a80e1a68bc714b3c75d1a/Random%20Variables%2022d81ba4f78a80e4b3ffea085e9f3572.md)
 
 [Continuous Random Variables](Probability%20Theory%2021181ba4f78a80e1a68bc714b3c75d1a/Continuous%20Random%20Variables%2022d81ba4f78a8042ad83d2270b380939.md)
+
+[Functions of a Random Variable](Probability%20Theory%2021181ba4f78a80e1a68bc714b3c75d1a/Functions%20of%20a%20Random%20Variable%2024181ba4f78a801ca928ec66c6ca4aa3.md)
+
+[Basic Statistics](Probability%20Theory%2021181ba4f78a80e1a68bc714b3c75d1a/Basic%20Statistics%2024381ba4f78a8031b962ee8cefb4d067.md)

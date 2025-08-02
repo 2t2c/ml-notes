@@ -10,7 +10,7 @@ token_v2 = os.environ["NOTION_TOKEN_V2"]
 file_token = os.environ["NOTION_FILE_TOKEN"]
 
 # notion page id
-page_id = "21181ba4f78a800b83e6d55971c0d1df"
+page_id = "21181ba4f78a80e1a68bc714b3c75d1a"
 
 if __name__ == "__main__":
     exporter = NotionExporter(
