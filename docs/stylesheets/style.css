@@ -146,13 +146,12 @@ html {
 }
 
 .homepage .about__title span {
-  font-family: "Nanum Pen Script";
+  font-family: "Chewy", system-ui;
   position: relative;
   top: -0.8vh;
   margin-left: 6rem;
-  font-weight: 800;
+  font-weight: 100;
   font-size: 4rem !important;
-  text-transform: uppercase;
   color: #ff4081;
   white-space: nowrap;
   display: block;

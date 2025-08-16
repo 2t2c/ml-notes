@@ -10,6 +10,19 @@ body:has(.homepage) .md-tabs {
   border-bottom: none !important;
 }
 
+.md-header {
+  transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease, opacity 0.3s ease;
+}
+
+.md-header.scrolled {
+  color: inherit;
+  background-color: rgba(255, 255, 255, 0.01);            
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-bottom: none;
+}
+
+
 /* body:has(.homepage) .md-header, */
 /* body:has(.homepage) .md-tabs:hover {
   background-color: rgba(255, 255, 255, 0.1);

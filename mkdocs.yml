@@ -2,7 +2,7 @@ site_name: ML Notes
 site_url: https://2t2c.github.io/ml-notes/
 theme:
   name: material
-  logo: assets/logo.png
+  logo: assets/homepage/logo.png
   custom_dir: overrides
   features:
     - navigation.tabs
@@ -50,10 +50,14 @@ markdown_extensions:
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.plot.ly/plotly-latest.min.js
+  - javascripts/header.js
+  - javascripts/plot.js
 
 extra_css:
   - stylesheets/style.css
   - stylesheets/extra.css
+  - stylesheets/plot.css
   
 plugins:
   - search

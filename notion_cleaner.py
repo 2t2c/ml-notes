@@ -8,7 +8,10 @@ def slugify(name):
     # convert to lowercase and replace spaces with hyphens
     return name.lower().replace(' ', '-')
 
-def strip_guid(name):
+def strip_guid(name, ext=None):
+    # if it's a database .csv file
+    if ext == ".csv":
+        name = name.replace('_all', '')
     # remove trailing 32 hex char GUID after space
     return re.sub(r'\s[0-9a-f]{32}$', '', name)
 
@@ -28,6 +31,9 @@ def rename_files_and_build_structure(src_root, dst_root):
         rel_parts = [] if rel_path == '.' else rel_path.split(os.sep)
         clean_parts = [slugify(strip_guid(p)) for p in rel_parts]
         dst_dir = os.path.join(dst_root, *clean_parts)
+        # skip any 'resources' directory
+        if '/resources' in dst_dir:
+            continue
         os.makedirs(dst_dir, exist_ok=True)
 
         subtree = mkdocs_structure
@@ -44,7 +50,7 @@ def rename_files_and_build_structure(src_root, dst_root):
             if ext not in ['.md', '.csv']:
                 continue
             file_path = os.path.join(root, filename)
-            clean_name = strip_guid(name)
+            clean_name = strip_guid(name, ext)
             slug_name = slugify(clean_name) + ext
             dst_file = os.path.join(dst_dir, slug_name)
             

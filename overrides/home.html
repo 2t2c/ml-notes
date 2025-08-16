@@ -6,6 +6,10 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chewy&family=Just+Another+Hand&family=Patrick+Hand&family=Reenie+Beanie&display=swap"
+    rel="stylesheet"
+  />
 {% endblock %}
 
 
@@ -16,7 +20,7 @@
       <div class="wrapper">
         <div class="primary-header__inner">
           <div class="logo">
-            <img src="assets/book.png" alt="Logo" />
+            <img src="assets/homepage/book.png" alt="Logo" />
           </div>
           <div class="flex-group" aria-label="social links">
             <div style="width: 15rem; height: 6rem;"></div>
@@ -57,7 +61,7 @@
             <a href="#" id="new-game-link">New Game</a>
             <div id="new-game-box" class="disclaimer">
               <div class="gif-container">
-                <img src="assets/game.gif" alt="Game Gif" style="width:100%; height:auto; border-radius:2px;">
+                <img src="assets/homepage/game.gif" alt="Game Gif" style="width:100%; height:auto; border-radius:2px;">
                 <div class="loading-text glitch" aria-label="Loading">
                   <span aria-hidden="true">loading...</span>
                   loading...
@@ -108,15 +112,15 @@
     </div>
 
 
-    <img id="parallax-bg" class="parallax__bg" src="assets/firewatch_dark.jpg" alt="Background" />
+    <img id="parallax-bg" class="parallax__bg" src="assets/homepage/firewatch_dark.jpg" alt="Background" />
     <div class="parallax__overlay"></div>
-    <!-- <img class="parallax__dust" src="assets/dust.webp" alt="Dust" /> -->
-    <img class="parallax__foreground-back" src="assets/foreground-back.webp" alt="Foreground Back" />
-    <img class="parallax__foreground-front" src="assets/foreground-front.webp" alt="Foreground Front" />
-    <img class="parallax__tower" src="assets/tower.png" alt="Tower" />
-    <!-- <img class="parallax__luna" src="assets/luna.webp" alt="Luna" /> -->
-    <img class="parallax__map" src="assets/map.png" alt="Map" />
-    <!-- <img class="parallax__rays" src="assets/rays.webp" alt="Rays" /> -->
+    <!-- <img class="parallax__dust" src="assets/homepage/dust.webp" alt="Dust" /> -->
+    <img class="parallax__foreground-back" src="assets/homepage/foreground-back.webp" alt="Foreground Back" />
+    <img class="parallax__foreground-front" src="assets/homepage/foreground-front.webp" alt="Foreground Front" />
+    <img class="parallax__tower" src="assets/homepage/tower.png" alt="Tower" />
+    <!-- <img class="parallax__luna" src="assets/homepage/luna.webp" alt="Luna" /> -->
+    <img class="parallax__map" src="assets/homepage/map.png" alt="Map" />
+    <!-- <img class="parallax__rays" src="assets/homepage/rays.webp" alt="Rays" /> -->
 
     <script>
       function updateBackground() {
@@ -124,9 +128,9 @@
         const scheme = document.body.getAttribute("data-md-color-scheme");
         console.log("Color scheme:", scheme);
         if (scheme === "default" || scheme === "light") {
-          bg.src = "assets/firewatch_light.jpg";
+          bg.src = "assets/homepage/firewatch_light.jpg";
         } else {
-          bg.src = "assets/firewatch_dark.jpg";
+          bg.src = "assets/homepage/firewatch_dark.jpg";
         }
       }
 
