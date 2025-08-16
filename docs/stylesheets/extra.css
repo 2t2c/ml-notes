@@ -1,25 +1,22 @@
-/* Target pages that contain the homepage div */
-body:has(.homepage) .md-header {
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
-
+/* homepage overrides */
+body:has(.homepage) .md-header,
 body:has(.homepage) .md-tabs {
   background-color: transparent !important;
   box-shadow: none !important;
   border-bottom: none !important;
 }
 
-.md-header {
+/* scroll effect on all other pages */
+body:not(:has(.homepage)) .md-header {
   transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease, opacity 0.3s ease;
 }
 
-.md-header.scrolled {
+body:not(:has(.homepage)) .md-header.scrolled {
   color: inherit;
   background-color: rgba(255, 255, 255, 0.01);            
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
 
